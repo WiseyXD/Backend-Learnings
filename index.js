@@ -23,18 +23,7 @@ app.post("/api/login", (req, res) => {
 	);
 });
 
-app.post("/api/register", (req, res) => {
-	const userName = req.body.name;
-	const userEmail = req.body.email;
-	const userPassword = req.body.password;
-
-	res.json({
-		success: true,
-		email: userEmail,
-		password: userPassword,
-		name: userName,
-	});
-});
+app.post("/api/register");
 
 app.listen(port, () => {
 	console.log(`Server Is working on port : ${port}`);
