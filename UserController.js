@@ -11,4 +11,12 @@ const userRegister = (req, res) => {
 	});
 };
 
+const userLogin = (req, res) => {
+	res.sendFile(path.join(__dirname + "/index.html"));
+	res.send(
+		`<h1>${req.body.name} || ${req.body.password} || ${req.body.email}</h1>`
+	);
+};
+
 module.exports(userRegister);
+module.exports(userLogin);
